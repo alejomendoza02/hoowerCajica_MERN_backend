@@ -1,10 +1,10 @@
 import Video from "../models/Video.js";
 
 // Get videos
-
+ 
 const getVideos = async (req, res) => {
   // Get the videos in the BD
-  const videos = await Video.find();
+  const videos = await Video.find().sort({createdAt: 'desc'});
   res.json(videos);
 };
 
