@@ -23,8 +23,9 @@ const postSchema = mongoose.Schema(
       default: "noticia",
     },
     author: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Admin",
+      type: String,
+      requiered: true,
+      trim: true,
     },
     published: {
       type: Boolean,

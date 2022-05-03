@@ -10,10 +10,6 @@ const newPostAdmin = async (req, res) => {
   // Create the post with the info that has been sent
   const post = new Post(req.body);
 
-  // Assign the creator of the post.
-
-  post.author = req.admin._id;
-
   // Trycatch for save the post
 
   try {
@@ -86,6 +82,7 @@ const editPostAdmin = async (req, res) => {
   post.img_header = req.body.img_header || post.img_header;
   post.body = req.body.body || post.body;
   post.tipo = req.body.tipo || post.tipo;
+  post.author = req.body.author || post.author;
   post.published = req.body.published || post.published;
 
   try {
