@@ -50,7 +50,7 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
 
-cron.schedule("*/10 7-9 * * *", () => {
+cron.schedule("*/15 * * * *", () => {
   const getVideos = async () => {
     try {
       const response = await fetch(
