@@ -16,8 +16,12 @@ import adminRoutes from "./routes/adminRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import videoRoutes from "./routes/videoRoutes.js";
 
+
 const app = express();
+
 app.use(express.json());
+
+
 dotenv.config();
 conectarDB();
 
